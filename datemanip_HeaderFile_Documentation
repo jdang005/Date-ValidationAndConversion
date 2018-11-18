@@ -1,0 +1,67 @@
+Source Code   : datemanip.h
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+I hereby certify that this collective work is my own and none of it is the work
+of any other person or entity.
+
+______________________________
+
+Language      : C
+
+Compile/Run   : N/A
+
+Description   : This header file is used to include several libraries, define
+                the enumerated type bool and several constants, as well as to
+                prototype several functions defined in the convertMain.c,
+                validateMain.c, and datemanip.c source code files.
+
+Libraries     : stdio.h  - used for common input/output definitions and
+                operations and definitions like fscanf, fprintf, etc.
+                stdlib.h - used for the atol(char *) and atoi(char *) functions.
+                limits.h - used for INT_MIN and INT_MAX definitions.
+                string.h - used for strncpy(char *, char *, size_t).
+
+Definitions   : bool             - simple enumeration boolean type {FALSE, TRUE}
+                EXECUTION_STATUS - the execution status of main, (0) is FALSE
+                NUM_INIT         - standard initializer for numbers and
+                                   characters (0)
+                MAX_STR_BUFF     - maximum size for string input, constrained by
+                                   the standard size of the unix console
+                                   (80)
+                FEBRUARY         - February has an extra day during a leap years
+                                   so it's useful to know that February is the
+                                   2nd month in the year (2)
+                ISVALIDDATEERROR - a constant used in the printErrorMessage to
+                                   denote that the date being read is not valid
+                                   (1)
+                IFILEERROR       - a constant used in the printErrorMessage to
+                                   denote that the input file is not valid
+                                   (2)
+                OFILEERROR       - a constant used in the printErrorMessage to
+                                   denote that the output file is not valid
+                                   (3)
+                MONTHSPERYEAR    - the number months in a calendar year (12)
+
+Prototyped    : bool validateCommandInput(int, const char * *);
+Functions       void validateStandardInput(int);
+                bool isValidDate(char *);
+                bool isValidMonth(char *);
+                bool isValidDay(char *, char *, char *);
+                bool isValidYear(char *);
+                bool isLeapYear(char *);
+                bool convertDate(char *, char *);
+                void printDatesFile();
+                int copyChars(char *, const char *, char);
+                int getLine(char *);
+                void printErrorMessage(int);
+
+Required      : None
+Features Not
+Included
+
+Known Bugs    : None

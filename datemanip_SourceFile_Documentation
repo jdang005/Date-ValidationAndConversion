@@ -1,0 +1,29 @@
+Source Code   : datemanip.c
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+I hereby certify that this collective work is my own and none of it is the work
+of any other person or entity.
+
+______________________________
+
+Language      : C
+
+Compile/Run   : N/A
+
+Description   : This source file is used to define commonly used date
+                manipulation functions and constants.
+
+Function      : int copyChars(char dest[], const char * src, char delim);
+Definitions     int getLine(char dest[]);
+                void printErrorMessage(int mode);
+
+Required      : None
+Features Not
+Included
+
+Known Bugs    : None

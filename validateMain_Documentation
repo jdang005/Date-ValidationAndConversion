@@ -1,0 +1,81 @@
+Source Code   : validateMain.c
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+I hereby certify that this collective work is my own and none of it is the work
+of any other person or entity.
+
+______________________________
+
+Language      : C
+
+Compile/Run   : make ValidateMain
+(w/Makefile)    ./ValidateMain [int >= 0: argument]
+
+Compile/Run   : gcc -o ValidateMain validateMain.c datemanip.c
+(no/Makefile)   ./ValidateMain [int >= 0: argument]
+
+Description   : ValidateMain takes command line input, a number greater than or
+                equal to zero, to determine the number of strings that must be
+                validated from the standard input. Zero from command line
+                instructs ValidateMain to validate every string in the standard
+                input. A valid string is a date that is formatted as follows:
+                "month/day/year"
+                A valid month is a number within the range 1-12 inclusive. A
+                valid day is a number generally within the range 1-31 inclusive
+                but is dependent on the particular month, and a valid year is
+                within the range INT_MIN...INT_MAX inclusive, negative numbers
+                included. Leap years are considered as outlined in chapter 5
+                section 7 of the book "The C Programming Language" by
+                Brian Kernighan and Dennis Ritchie, Prentice-Hall
+                ISBN:0-13-110362-8. All error messages encountered must be
+                printed to the screen.
+
+Input         : Command-line Input: [(int >= 0): numOfValidDates]
+
+                Standard Input: The input will be string data in the form of
+                dates that may or may not be valid. The command-line input,
+                numOfValidDates, determines the number of dates that must be
+                validated from the standard input in order for the program to
+                terminate successfully. If numOfValidDates is greater than the
+                number of strings in the standard input or numOfValidDates is
+                equal to zero, then the program will validate all dates in the
+                standard input.
+
+Output        : Standard Output: The output of ValidateMain will be the
+                validated dates printed line by line.
+
+                Standard Error: All errors will be output to the screen.
+
+Process       : ValidateMain begins by validating the command-line input,
+                followed by validating existence of the standard input, then
+                validating the input provided by the standard input. Those
+                values from the standard input that meet the required
+                "month/day/year" string formatting will be counted as valid and
+                printed to the standard output. When are command line argument
+                has been satisfied by the number of dates validated, the program
+                terminates successfully. If there are any errors in the program
+                will print the reason for the error to the screen and terminate
+                unsuccessfully.
+
+Function      : bool validateCommandInput(int numOfArgs,
+Definitions                               const char * strArgs[]);
+                int validateStandardInput(int commandInput);
+                bool isValidDate(char * possibleDate);
+                bool isValidMonth(char * possibleMonth);
+                bool isValidDay(char * possibleMonth, char * possibleDay,
+                                char * possibleYear);
+                bool isValidYear(char * possibleYear);
+                bool isLeapYear(char * possibleLeapYear);
+
+
+
+Required      : None
+Features Not
+Included
+
+Known Bugs    : None

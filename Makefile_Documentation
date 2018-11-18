@@ -1,0 +1,40 @@
+Source Code   : Makefile
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+I hereby certify that this collective work is my own and none of it is the work
+of any other person or entity.
+
+______________________________
+
+Language      : Unix make file
+
+Compile/Run   : make all
+
+Description   : This make file is intended to be used on a Unix system with the
+                gcc compiler for C99.
+
+Input         : "validateMain.c", "convertMain.c", "datemanip.h", "datemanip.c"
+                -These must be located within the same directory as this make
+                file.
+
+Output        : {"ValidateMain", "ConvertMain"} - The executable files
+                "ValidateMain" and "ConvertMain" will be created.
+
+Process       : First the make file uses gcc to compile both "validateMain.c"
+                and "convertMain.c" into the object files "validateMain.o" and
+                "convertMain.o". Both object files compile with "datemanip.c".
+                Then the make file uses gcc to link each of the object files
+                with the header files <stdio.h>, <stdlib.h>, <signal.h>,
+                <limits.h>, <string.h>, and "datemanip.h", creating the
+                executable files "ValidateMain" and "ConvertMain".
+
+Required      : None
+Features Not
+Included
+
+Known Bugs    : None

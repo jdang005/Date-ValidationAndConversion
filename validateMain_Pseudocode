@@ -1,0 +1,137 @@
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+/* bool returning function to check the validity of the command-line input */
+bool validateCommandInput(int numOfArgs, const char * strArgs[])
+{
+  /* Verify number of arguments */
+  1. if numOfArgs is not the CORRECTNUMOFARGS
+        return FALSE
+
+  /* Verify range of variable */
+  2. if strArgs[LOCTOVERIFY] a number greater than of equal to the LOWESTBOUND
+        return TRUE
+     else
+        return FALSE
+}
+
+/*
+   int returning function to validate dates from the standard input and print
+   the dates to standard output.
+*/
+int validateStandardInput(int commandInput)
+{
+  1. Determine based on the command input when to stop reading.
+
+  2. Read entire lines of input until the condition to stop reading is met
+      Check the line for a valid date.
+      If the date is valid, increment the valid date counter, and print to
+      standard output.
+
+  3. return valid date counter.
+}
+
+/*
+  bool returning function to check if a string is a valid date, composed of a
+  valid month, a valid day, and a valid year in the format
+
+  "month/day/year"
+*/
+bool isValidDate(char * possibleDate)
+{
+  1. Read each character one by one keeping count of the number of characters
+     and the location of the first two '/' characters encountered.
+
+  2. If the string does not encounter two '/' characters before the count of
+     characters is greater than MAX_STR_BUFF or a '\0' is encountered
+        return FALSE
+
+  3. Copy the characters that come before the first '/' character, the
+     characters that are after it and before the next '/' character, and the
+     characters that come after the second '/' character into three string
+     variables called possibleMonth, possibleDay, and possibleYear.
+
+  4. If possibleMonth is a valid month string, possibleDay is a valid day
+     string, and possibleYear is a valid year string
+        return TRUE
+     ELSE
+        return FALSE
+}
+
+/*
+  bool returning function to determine if a string is a valid month. A valid
+  month is a string that can be interpreted as an integer between 1 and 12
+  inclusive.
+*/
+bool isValidMonth(char * possibleMonth)
+{
+  1.  if possible month is not an integer
+        return FALSE
+  2.  if month is an integer in the range 1...12 inclusive
+        return TRUE
+      else
+        return FALSE
+}
+
+/*
+  bool returning function to determine whether a string is a valid day on a
+  calendar taking into consideration leap years, where February has 29 days
+  instead of the usual 28.
+*/
+bool isValidDay(char * possibleMonth, char * possibleDay, char * possibleYear)
+{
+  1. if possibleMonth or possibleDay or possibleYear is not an integer
+        return FALSE
+
+  3. if the year provided is a leap year and the month is February (the second
+     month in the year)
+        set range of valid days to 1...29(inclusive)
+
+  4. if possible day is an integer within the range for the particular month
+     (days for each month are stored in an array of integers)
+        return TRUE
+     else
+        return FALSE
+}
+
+/*
+  bool returning function to validate whether or not a string can be represented
+  as an nt.
+*/
+bool isValidYear(char * possibleYear)
+{
+  /* The string given could be a positive or negative integer */
+  1. count every contiguously adjacent digit in the possibleInt string
+     (check and keep track encounters with the negative symbol)
+        if any symbol is not a digit and not the end of string or if two
+        negative symbols are encountered
+          return FALSE
+
+  2. if count is greater than the maximum number of characters acceptable by a
+     single line of console input
+        return FALSE
+
+  3. if possibleInt is greater than INT_MAX or less than INT_MIN
+        return FALSE
+
+  4. return TRUE
+}
+
+/*
+  bool returning function to determine if a particular year is a leap year. Leap
+  years are years that are divisible by 4, except those year that are divisible
+  by 100 but not divisible by 400.
+*/
+bool isLeapYear(char * possibleLeapYear)
+{
+  1. if possibleLeapYear is an integer divisible by 4
+        if possibleLeapYear is not divisible by 100
+          return TRUE
+        else if possibleLeapYear is divisible by 400
+          return TRUE
+  2. return FALSE
+}

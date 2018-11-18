@@ -1,0 +1,13 @@
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+1 - Create variables to store reused commands, files, and destinations.
+2 - Compile the source code files into independent object code files.
+3 - Use the linker to link each of the object code files with all appropriate
+    headers.
+4 - Make use of the "all" build target so that both executables can be created
+    using the make all command in unix.

@@ -1,0 +1,33 @@
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+/*
+  function to convert a validated date string into the "day month year" format
+  creating the new string in the dest array.
+*/
+bool convertDate(char dest[MAX_STR_BUFF], char * src)
+{
+  1. Capture individual variables day, month, and year from the src array. If
+     not successful, return FALSE.
+
+  2. Define new string based on these variables.
+
+  3. Print the string to standard output.
+}
+
+/*
+  function to print the dates.dat file if present
+*/
+void printDatesFile()
+{
+  1. Check for file's validity
+
+  2. If not valid
+        print printError
+
+  3. print every character in the file
+}

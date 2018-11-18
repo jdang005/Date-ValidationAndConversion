@@ -1,0 +1,50 @@
+Source Code   : convertMain.c
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+I hereby certify that this collective work is my own and none of it is the work
+of any other person or entity.
+
+______________________________
+
+Language      : C
+
+Compile/Run   : make ConvertMain
+(w/Makefile)    ./ConvertMain
+
+Compile/Run   : gcc -o ConvertMain convertMain.c datemanip.c
+(no/Makefile)   ./ConvertMain
+
+Description   : ConvertMain uses the standard input for input and converts input
+                into the format:
+                "day month year"
+                Where day is a number, month is an abbreviation for a month of
+                the year, and year is a number.
+
+Input         : Standard Input: An undefined number of string inputs that have
+                been validated by ValidateMain.
+
+Output        : Standard Output: The converted dates followed by a printout of
+                the file dates.dat.
+
+Process       : ConvertMain repeatedly scans the standard input until no more
+                data is found. After each scan, the program converts the input
+                into the "day month year" format or prints an error.
+
+                After converting the string the program prints it to standard
+                output if convertMain encounters a blank line, it stops
+                converting input and prints file "dates.dat" to the standard
+                output.
+
+Function      : bool convertDate(char dest[MAX_STR_BUFF], char * src);
+Definitions     void printDatesFile();
+
+Required      : None
+Features Not
+Included
+
+Known Bugs    : None

@@ -1,0 +1,69 @@
+Author        : Justin Danglade
+Student ID    : 4552415
+Course        : COP4338
+Section       : U04
+Instructor    : William Feild
+Due Date      : November 6, 2018
+
+/*
+  int returning function to copy a sequence of characters given a
+  delimitating character
+*/
+int copyChars(char dest[MAX_STR_BUFF + 1], char * src, char delim)
+{
+  /* Validate the source pointer */
+  1. if src is NULL
+        return 0
+
+  2. iterate through the src from the beginning counting the number of
+     characters.
+
+  3. if the deliminator is not found within the MAX_STR_BUFF size
+        return 0
+
+  4. use strncpy to copy the src to the destination given the number of
+     characters that were counted.
+
+  5. return the number of characters counted.
+}
+
+/*
+  int returning function to read and copy a line of character input from the
+  standard input into the destination string.
+*/
+int getLine(char dest[MAX_STR_BUFF + 1])
+{
+  1. Read each character from standard input, keeping track of the number of
+     characters read.
+
+  2. Copy each character to the correct position in dest.
+
+  3. Stop when: a '\n' character is encountered,
+                an EOF character is encountered,
+                or the number of characters that have been read is greater than
+                MAX_STR_BUFF
+
+  4. if there was no newline the input is invalid and 0 is returned.
+
+  5. return the number of characters copied.
+}
+
+/* void returning function that can print multiple error messages */
+void printErrorMessage(int mode)
+{
+  /* mode zero represents invalid command input*/
+  /* mode one represents invalid date */
+  /* Unknown modes represent unknown reasons for error */
+  1. if mode is 0
+        message is "Invalid command input"
+     else if mode is 1
+        message is "Invalid date"
+     else if mode is 2
+        message is "Input File Error"
+     else if mode is 2
+        message is "Output File Error"
+     else
+        message is "Unknown reason for error!"
+
+  2. printError(message)
+}
